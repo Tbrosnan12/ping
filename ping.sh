@@ -1,6 +1,6 @@
 #!/bin/bash
 
-dir=/home/pi/nas/projects/ping
+dir=/home/pi/nas/projects/ping_pub
  
 name_clean() {
     local name=$1
