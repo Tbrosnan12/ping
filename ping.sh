@@ -45,7 +45,7 @@ if [ -d "$dir/meta_data/paper_lists" ]; then
     echo "Comparing new papers to $dir/meta_data/paper_lists/"
 else
     echo "No old comparison arxive snapshot found exiting"
-    exit 0  
+    #exit 0  
 fi
 
 
@@ -65,7 +65,6 @@ for author in "${authors[@]}"; do
             continue
         else
             echo "New Paper from "${author}" at https://arxiv.org/abs/"${arxive_no}" !"
-            echo "Notifying Thomas:"
 
             file=$dir/meta_data/"${arxive_no}".md
             touch  "$file"
@@ -79,7 +78,7 @@ for author in "${authors[@]}"; do
             echo "### Abstract:" >> "$file"
             echo "$abstract" >>  "$file"
         
-            cat $dir/matrix/matrix_ping.sh meta_data/"${arxive_no}".md
+            cat $dir/meta_data/"${arxive_no}".md
             rm $dir/meta_data/"${arxive_no}".md
             new_papers=$(( new_papers + 1 ))
         fi
