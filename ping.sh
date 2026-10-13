@@ -37,7 +37,6 @@ title() {
 while IFS= read -r line; do
     authors+=("$line")
 done <$dir/authors.txt
-#authors=("Alexander Farren" "Laurens Smulders" "Casey Farren-Colloty" "Yong Sheng Yap" "Matthias Nowinski")
 
 if [ -d "$dir/meta_data/paper_lists" ]; then
     #mv $dir/meta_data/paper_lists $dir/meta_data/paper_lists_old
