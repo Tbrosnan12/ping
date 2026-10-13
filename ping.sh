@@ -79,7 +79,7 @@ for author in "${authors[@]}"; do
             echo "### Abstract:" >> "$file"
             echo "$abstract" >>  "$file"
         
-            bash $dir/matrix/matrix_ping.sh meta_data/"${arxive_no}".md
+            cat $dir/matrix/matrix_ping.sh meta_data/"${arxive_no}".md
             rm $dir/meta_data/"${arxive_no}".md
             new_papers=$(( new_papers + 1 ))
         fi
